@@ -1,0 +1,19 @@
+server:
+  port: ${SERVER_PORT:8080}
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:mysql://localhost:3306/helpdesk?createDatabaseIfNotExist=true}
+    username: ${DATABASE_USERNAME:root}
+    password: ${DATABASE_PASSWORD:root}
+  jpa:
+    hibernate.ddl-auto: validate
+    open-in-view: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+app:
+  jwt:
+    secret: ${JWT_SECRET:my-super-secret-jwt-key-for-helpdesk-app-12345678}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
