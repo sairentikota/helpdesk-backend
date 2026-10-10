@@ -30,6 +30,7 @@ RESTful backend for the Help Desk & Ticket Management System built with Java 21,
 ```
 
 ## Docker
+
 ```bash
 docker build -t helpdesk-backend .
 docker run -p 8080:8080 helpdesk-backend
